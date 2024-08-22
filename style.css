@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/007/278/150/non_2x/dark-background-abstract-with-light-effect-vector.jpg);
+    background-size: contain;
+}
+
+.main {
+    align-content: center;
+    text-align: center;
+    padding: 10px 0 10px 0;
+    height: auto;
+    width: 300px;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: rgb(71, 71, 71);
+    cursor: pointer;
+}
+
+.main input {
+    height: 30px;
+    width: 150px;
+    padding-left: 8px;
+    border-radius: 10px;
+    border: none;
+    background-color: #868684;
+    color: #ffffff;
+}
+
+input::placeholder {
+    color: #ffffff;
+}
+
+input:focus {
+    outline-color: rgb(0, 0, 0);
+    color: black;
+}
+
+input:active {
+    outline-color: rgb(0, 0, 0);
+    color: black;
+}
+
+.main button {
+    height: 30px;
+    width: 70px;
+    border-radius: 10px;
+    border: none;
+    background-color: #868684;
+    color: white;
+}
+
+#ol-list li {
+    color: #ffffffb6;
+    text-align: start;
+    margin-left: 14%;
+    list-style-type: none;
+}
+
+h2 {
+    margin-bottom: .2rem;
+    text-shadow: 2px 2px 5px #868684;
+    text-transform: uppercase;
+}
+
+#ol-list span {
+    color: #e6e6e6;
+}

@@ -1,45 +1,25 @@
-// let userInput = document.getElementById("user-input")
-// let olList = document.getElementById("ol-list")
-// let num = 0
-// let htmlnum = document.getElementById("x");
-// function addVote() {
-//     let liList = document.createElement("li")
-//     liList.innerHTML = userInput.value;
-//     olList.appendChild(liList)
-//     // userInput.value = num++
-//     // htmlnum.innerHTML = num
-//     userInput.value = ""
+let userInput = document.getElementById("user-input");
+let olList = document.getElementById("ol-list");
+let value = 1;
+function addVote() {
 
-//     if (userInput == "") {
-//         alert("Please Enter a Value")
-//     }
-//     // console.log(userInput);
-    
-// }
+    if (userInput.value === "") {
+        alert("Invalid");
+    } else {
+        let liList = document.createElement("li");
+        liList.innerHTML = value++ + ": " + userInput.value + " ";
+        olList.appendChild(liList).style.marginTop = "10px";
+        userInput.value = "";
 
-// function voteCount(){
-//     num++
-//     htmlnum.innerHTML = num
-// }
-
-function addItem() {
-    const itemList = document.getElementById('itemList');
-    const itemInput = document.getElementById('itemInput');
-
-    if (itemInput.value.trim() !== "") {
-        const newItem = document.createElement('li');
-        newItem.textContent = `${itemInput.value} (0)`;
-        newItem.dataset.count = 0;
-
-        // Increment the counter when the item is clicked
-        newItem.addEventListener('click', function() {
-            let count = parseInt(this.dataset.count);
+        // increment
+        let count = 0;
+        let span = document.createElement("span");
+        span.innerHTML = "(0)";
+        liList.appendChild(span);
+        liList.addEventListener("click", function () {
             count++;
-            this.dataset.count = count;
-            this.textContent = `${itemInput.value} (${count})`;
+            span.innerHTML = `( ${count} )`;
         });
+    };
 
-        itemList.appendChild(newItem);
-        itemInput.value = ''; // Clear the input field
-    }
-}
+};
